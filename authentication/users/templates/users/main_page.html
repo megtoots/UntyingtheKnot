@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anger Management Hub</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -109,7 +110,7 @@
       <a href="#">Get Started Today</a>
     </section>
     <section class="card">
-    <img src="/images/istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+      <img src="{% static 'images/istockphoto-1294477039-612x612.jpg' %}" alt="Anger Triggers" class="card-image">
       <div>
         <h2>Learn Anger Triggers</h2>
         <p>Explore articles and guides to understand what triggers your anger.</p>
@@ -117,7 +118,7 @@
       </div>
     </section>
     <section class="card">
-      <img src="man-think-good-idea-while-drink-read-book_294791-176.jpg" alt="Anger Assessment" class="card-image">
+      <img src="{% static 'images/man-think-good-idea-while-drink-read-book_294791-176.jpg' %}" alt="Anger Assessment" class="card-image">
       <div>
         <h2>Self-Assessment Tools</h2>
         <p>Take a quiz to assess your anger levels and receive personalized coping mechanisms.</p>
@@ -125,7 +126,7 @@
       </div>
     </section>
     <section class="card">
-      <img src="Screenshot 2024-04-22 202659.png" alt="Journaling" class="card-image">
+      <img src="{% static 'images/Screenshot 2024-04-22 202659.png' %}" alt="Journaling" class="card-image">
       <div>
         <h2>Track Your Progress</h2>
         <p>Maintain a journal to identify patterns in your triggers and emotions.</p>
@@ -133,21 +134,21 @@
       </div>
     </section>
     <section class="card">
-      <img src="Screenshot 2024-04-22 203031.png" alt="Rewards" class="card-image">
+      <img src="{% static 'images/Screenshot 2024-04-22 203031.png' %}" alt="Rewards" class="card-image">
       <div>
         <h2>Stay Motivated</h2>
         <p>Earn badges for completing exercises</p>
         <a href="relaxation_techniques.html">Learn More</a>
-   </div>
-  </section>
-  <section class="card">
-    <img src="Screenshot 2024-04-22 203200.png" alt="Relaxation Techniques" class="card-image">
-    <div>
-      <h2>Relaxation Techniques</h2>
-      <p>Discover relaxation methods like deep breathing and meditation to manage anger in the moment.</p>
-      <a href="relaxation_techniques.html">Learn More</a>
-    </div>
-  </section>
+      </div>
+    </section>
+    <section class="card">
+      <img src="{% static 'images/Screenshot 2024-04-22 203200.png' %}" alt="Relaxation Techniques" class="card-image">
+      <div>
+        <h2>Relaxation Techniques</h2>
+        <p>Discover relaxation methods like deep breathing and meditation to manage anger in the moment.</p>
+        <a href="relaxation_techniques.html">Learn More</a>
+      </div>
+    </section>
 	</main>
 
 	<footer>
