@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anger Triggers</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -102,7 +103,7 @@
 
 <body>
   <header>
-    <h1><a class="home" href="main_page.html">Anger Management Journey</a></h1>
+    <h1><a class="home" href="{% url 'main_page' %}">Anger Management Journey</a></h1>
   </header>
   <nav class="bluB">
     <a class="bluB" href="#">About Us</a>
@@ -115,7 +116,7 @@
 	</main>
     <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+            <img src="{% static 'images/istockphoto-1294477039-612x612.jpg' %}" alt="Childhood and Upbringing" class="card-image">
             <div>
                 <h3>Childhood and Upbringing</h3>
                 <p>How we learn to cope with angry feelings is often influenced by our upbringing.</p>
@@ -126,7 +127,7 @@
       </section>
       <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+            <img src="{% static 'images/istockphoto-1294477039-612x612.jpg' %}" alt="Past Experiences" class="card-image">
             <div>
                 <h3>Past Experiences</h3>
                 <p>Sometimes the anger we're feeling right now can be related to our past experiences.</p>
@@ -137,7 +138,7 @@
       </section>
       <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+            <img src="{% static 'images/istockphoto-1294477039-612x612.jpg' %}" alt="Current Circumstances" class="card-image">
             <div>
                 <h3>Current circumstances</h3>
                 <p>We might feel angry about things that are going on in our lives right now. Or our current circumstances might make it harder to cope with or manage our emotions. </p>
@@ -148,7 +149,7 @@
       </section>
       <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+            <img src="{% static 'images/istockphoto-1294477039-612x612.jpg' %}" alt="Health and Well-being" class="card-image">
             <div>
                 <h3>Health and well-being</h3>
                 <p>Our physical and mental health can impact how we feel, and how we manage our emotions.</p>

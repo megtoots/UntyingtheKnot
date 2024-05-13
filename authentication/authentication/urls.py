@@ -14,4 +14,6 @@ urlpatterns = [
     path('main-page/pastexp.html', user_views.past_exp, name='past_exp'),
     path('main-page/currentc.html', user_views.currentc, name='currentc'),
     path('main-page/healthandwell.html', user_views.currentc, name='healthandwell'),
+    path('main-page/aboutus.html', user_views.aboutus, name='aboutus'),
+    path('main-page/rewards.html', user_views.rewards, name='rewards'),
 ]

@@ -38,3 +38,7 @@ def currentc(request):
     return render(request, 'users/currentc.html')
 def healthandwell(request):
     return render(request, 'users/healthandwell.html')
+def rewards(request):
+    return render(request, 'users/rewards.html')
+def aboutus(request):
+    return render(request, 'users/aboutus.html')

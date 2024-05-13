@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anger Triggers</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -53,7 +53,7 @@
       display: flex;
       align-items: center;
     }
-    header
+
     .card-image {
       flex: 0 0 100px;
       margin-right: 20px;
@@ -63,12 +63,11 @@
       color: #333;
       margin: 0;
     }
-    p.footer{
-        color:#666;
-    }
+
     p {
-      color:black;
+      color: #666;
     }
+
     a.bluB {
       background-color: #007bff;
       border: none;
@@ -90,22 +89,14 @@
         text-decoration: none;
         color:White;
     }
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-    }
-
-    main {
-        flex: 1;
-    }
     footer {
       background-color: #333;
       color: #fff;
       padding: 10px;
       text-align: center;
-      min-height: 50px;
+    }
+    h2.angT{
+        text-align:center
     }
   </style>
 </head>
@@ -115,54 +106,31 @@
     <h1><a class="home" href="{% url 'main_page' %}">Anger Management Journey</a></h1>
   </header>
   <nav class="bluB">
-    <a class="bluB" href="{% url 'aboutus' %}">About Us</a>
+    <a class="bluB" href="#">About Us</a>
     <a class="bluB" href="#">Contact Us</a>
     <a class="bluB" href="#">Success Stories</a>
   </nav>
-  <main >
-    <a class="bluB" href="{% url 'main_page' %}">Back</a>
-   <h3><center>Rewards</center></h3>
-   <section class="card">
-    <img src="{% static 'images/ribbonbadge.png' %}" alt="Anger Triggers" class="card-image">
-    <div>
-      <h2>Learn Anger Triggers.</h2>
-      <p>Read your first article on anger triggers.</p>
-      <label for="file">0/1</label>
-      <progress id="file" value="0" max="100"> 0% </progress>
-    </div>
-  </section>
-  <section class="card">
-    <img src="{% static 'images/ribbonbadge.png' %}" alt="Anger Triggers" class="card-image">
-    <div>
-      <h2>Quiz Time!</h2>
-      <p>Complete your first quiz.</p>
-      <label for="file">0/1</label>
-      <progress id="file" value="0" max="100"> 0% </progress>
-    </div>
-  </section>
-  <section class="card">
-    <img src="{% static 'images/ribbonbadge.png' %}" alt="Anger Triggers" class="card-image">
-    <div>
-      <h2>Perfect!</h2>
-      <p>Achieve a perfect score on a quiz.</p>
-      <label for="file">0/1</label>
-      <progress id="file" value="0" max="100"> 0% </progress>
-    </div>
-  </section>
-  <section class="card">
-    <img src="{% static 'images/ribbonbadge.png' %}" alt="Anger Triggers" class="card-image">
-    <div>
-      <h2>Hidden</h2>
-      <p>Find the hidden achievement!</p>
-      <label for="file">0/1</label>
-      <progress id="file" value="0" max="100"> 0% </progress>
-    </div>
-  </section>
-	</main>
+  <main>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to our website! We are a team of passionate individuals dedicated to providing [describe your mission, purpose, or what your website is about]. Our goal is to [describe what you aim to achieve through your website].</p>
+        
+        <h2>Our Team</h2>
+        <p>Meet the people behind Untying the Knot:</p>
+        <ul>
+            <li><strong> Mark Lawrence Quibot </strong> - Leader/ Developer </li>
+            <li><strong> James Gabriel Mabagos </strong> - Developer </li>
+            <li><strong> Menard Gymer Rivera </strong> - Developer </li>
+            <li><strong> Jerome Sontillano </strong> - Developer </li>
+        </ul>
+        
+        <h2>Our Mission</h2>
+        <p>[Describe your mission statement or what drives your team/organization.]</p>
     
-	<footer >
-  		<p class="footer">&copy; 2024 Anger Management Hub</p>
+    </div>
+    </main>
+	<footer>
+  		<p>&copy; 2024 Anger Management Hub</p>
 	</footer>
-
 	</body>
 </html>
