@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,17 +112,18 @@
 
 <body>
   <header>
-    <h1><a class="home" href="main_page.html">Anger Management Journey</a></h1>
+    <h1><a class="home" href="{% url 'main_page' %}">Anger Management Journey</a></h1>
   </header>
   <nav class="bluB">
-    <a class="bluB" href="#">About Us</a>
+    <a class="bluB" href="aboutus.html">About Us</a>
     <a class="bluB" href="#">Contact Us</a>
     <a class="bluB" href="#">Success Stories</a>
   </nav>
   <main >
+    <a class="bluB" href="{% url 'main_page' %}">Back</a>
     <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+            <img src="{% static 'images/reltek1.jpg' %}" alt="Anger Triggers" class="card-image">
             <div>
                 <h3>Relaxation Techniques 1</h3>
                 <p>How we learn to cope with angry feelings is often influenced by our upbringing.</p>
@@ -132,7 +134,7 @@
       </section>
       <section class="hero">
         <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
+          <img src="{% static 'images/reltek2.png' %}" alt="Anger Triggers" class="card-image">
             <div>
                 <h3>Relaxation Techniques 2</h3>
                 <p>Sometimes the anger we're feeling right now can be related to our past experiences.</p>

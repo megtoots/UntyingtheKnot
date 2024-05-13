@@ -26,8 +26,9 @@ def login_view(request):
     return render(request, 'users/login.html', {'form': form})
 
 def main_page(request):
-    # Logic for rendering the main_page.html template
     return render(request, 'users/main_page.html')
+def about_us(request):
+    return render(request, 'users/aboutus.html')
 def educational_materials(request):
     return render(request, 'users/educational_materials.html')
 def past_exp(request):
@@ -42,3 +43,9 @@ def rewards(request):
     return render(request, 'users/rewards.html')
 def aboutus(request):
     return render(request, 'users/aboutus.html')
+def reltech1(request):
+    return render(request, 'users/relaxation_techniques1.html')
+def reltech2(request):
+    return render(request, 'users/relaxation_techniques.html')
+def reltech3(request):
+    return render(request, 'users/relaxation_techniques2.html')
