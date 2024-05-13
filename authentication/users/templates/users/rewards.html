@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rewards</title>
+  <title>Anger Triggers</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -34,7 +34,7 @@
       text-align: center;
     }
 
-    nav a {
+    nav a.bluB {
       color: #144a51;
       text-decoration: none;
       margin: 0 10px;
@@ -52,7 +52,7 @@
       display: flex;
       align-items: center;
     }
-
+    header
     .card-image {
       flex: 0 0 100px;
       margin-right: 20px;
@@ -62,12 +62,13 @@
       color: #333;
       margin: 0;
     }
-
-    p {
-      color: #666;
+    p.footer{
+        color:#666;
     }
-
-    a {
+    p {
+      color:black;
+    }
+    a.bluB {
       background-color: #007bff;
       border: none;
       border-radius: 5px;
@@ -78,44 +79,88 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
-
-    a:hover {
+    a.bluB:hover {
       background-color: #0056b3;
     }
+    a.home :active{
+        text-decoration: none;
+    }
+    a.home{
+        text-decoration: none;
+        color:White;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
 
+    main {
+        flex: 1;
+    }
     footer {
       background-color: #333;
       color: #fff;
       padding: 10px;
       text-align: center;
+      min-height: 50px;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Anger Management Journey</h1>
+    <h1><a class="home" href="design.html">Anger Management Journey</a></h1>
   </header>
-  <nav>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Success Stories</a>
+  <nav class="bluB">
+    <a class="bluB" href="#">About Us</a>
+    <a class="bluB" href="#">Contact Us</a>
+    <a class="bluB" href="#">Success Stories</a>
   </nav>
-  <main>
-   
+  <main >
+    <a class="bluB" href="design.html">Back</a>
+   <h3><center>Rewards</center></h3>
+   <section class="card">
+    <img src="ribonbadge.png" alt="Anger Triggers" class="card-image">
+    <div>
+      <h2>Learn Anger Triggers.</h2>
+      <p>Read your first article on anger triggers.</p>
+      <label for="file">0/1</label>
+      <progress id="file" value="0" max="100"> 0% </progress>
+    </div>
+  </section>
+  <section class="card">
+    <img src="" alt="Anger Triggers" class="card-image">
+    <div>
+      <h2>Quiz Time!</h2>
+      <p>Complete your first quiz.</p>
+      <label for="file">0/1</label>
+      <progress id="file" value="0" max="100"> 0% </progress>
+    </div>
+  </section>
+  <section class="card">
+    <img src="ribonbadge.png" alt="Anger Triggers" class="card-image">
+    <div>
+      <h2>Perfect!</h2>
+      <p>Achieve a perfect score on a quiz.</p>
+      <label for="file">0/1</label>
+      <progress id="file" value="0" max="100"> 0% </progress>
+    </div>
+  </section>
+  <section class="card">
+    <img src="ribonbadge.png" alt="Anger Triggers" class="card-image">
+    <div>
+      <h2>Hidden</h2>
+      <p>Find the hidden achievement!</p>
+      <label for="file">0/1</label>
+      <progress id="file" value="0" max="100"> 0% </progress>
+    </div>
+  </section>
 	</main>
-    <section class="hero">
-        <section class="card">
-            <img src="istockphoto-1294477039-612x612.jpg" alt="Anger Triggers" class="card-image">
-            <div>
-                <label for="file">Complete Quizes 3/10 :</label>
-                <progress id="file" value="30" max="100"> 30% </progress>
-            </div>
-          </section>  
-        
-      </section>
-	<footer>
-  		<p>&copy; 2024 Anger Management Hub</p>
+    
+	<footer >
+  		<p class="footer">&copy; 2024 Anger Management Hub</p>
 	</footer>
 
 	</body>
