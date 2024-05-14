@@ -1,22 +1,123 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        {% extends 'users/base.html' %} {% block content %}
-        <br />
-        <div class="alert alert-success" role="alert">
-            <h2 style="text-align: center;">Logged out!</h2>
-        </div>
-        <h3>Login again?</h3>
-        <a href="{% url 'login' %}">---> Login</a> <br />
-        <a href="{% url 'home' %}"><--- Or go back to home.</a>
-        {% endblock content %}
-    </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anger Triggers</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a.bluB {
+      color: #144a51;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    main {
+      padding: 20px;
+    }
+    .card {
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .card-image {
+      flex: 0 0 100px;
+      margin-right: 20px;
+    }
+    h2 {
+      color: #333;
+      margin: 0;
+    }
+    p {
+      color: #666;
+    }
+    a.bluB {
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    a.bluB:hover {
+      background-color: #0056b3;
+    }
+    a.home:active {
+      text-decoration: none;
+    }
+    a.home {
+      text-decoration: none;
+      color: white;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      min-height: 50px;
+    }
+    h2.angT {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a class="home" href="{% url 'main_page' %}">Anger Management Journey</a></h1>
+  </header>
+  <nav class="bluB">
+    <a class="bluB" href="#">About Us</a>
+    <a class="bluB" href="#">Contact Us</a>
+    <a class="bluB" href="#">Success Stories</a>
+  </nav>
+  <main>
+    {% if user.is_authenticated %}
+    <div class="alert alert-success" role="alert">
+      <h3>Welcome {{ user.username }}!</h3>
+      <a href="{% url 'logout' %}">Logout</a>
+    </div>
+    {% else %}
+    <div class="alert alert-success" role="alert">
+      <h3>Welcome to Anger Management Journey!</h3>
+      <a href="{% url 'register' %}">Signup</a>
+      <a href="{% url 'login' %}">Login</a>
+    </div>
+    {% endif %}
+  </main>
+  <footer>
+    <p class="footer">&copy; 2024 Anger Management Hub</p>
+  </footer>
+</body>
+
 </html>

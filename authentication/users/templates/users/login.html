@@ -58,7 +58,7 @@
 <body>
     <div class="container">
         <h3>Login</h3>
-        <form action="{% url 'login' %}" method="POST">
+        <form action="{% url 'main_page' %}" method="POST">
             {% csrf_token %} 
             {% for field in form %}
             <p>
